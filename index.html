@@ -3,18 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <title>Notícias de Alex</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f5f5f5;
+}
+
+/* TOPO */
+header {
+  background: #c4170c;
+  padding: 20px;
+  text-align: center;
+}
+
+header img {
+  width: 120px;
+}
+
+/* GRID DE NOTÍCIAS */
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 10px;
+  margin: 0;
+}
+</style>
+
 </head>
 <body>
 
 <header>
-  <h1>📰 Notícias de Alex</h1>
-  <a href="admin.html" class="admin-btn">ADMIN</a>
+  <!-- TROQUE PELO SEU LOGO -->
+  <img src="https://via.placeholder.com/120" alt="Logo">
 </header>
 
-<div class="container" id="noticias"></div>
+<div class="container">
 
-<script src="script.js"></script>
+  <!-- NOTÍCIA 1 -->
+  <a href="noticia1.html" class="card">
+    <img src="https://via.placeholder.com/400x200">
+    <h3>Homem é flagrado em situação inusitada na cidade</h3>
+  </a>
+
+  <!-- NOTÍCIA 2 -->
+  <a href="noticia2.html" class="card">
+    <img src="https://via.placeholder.com/400x200">
+    <h3>Prefeitura anuncia novidade que surpreende moradores</h3>
+  </a>
+
+</div>
 
 </body>
 </html>
