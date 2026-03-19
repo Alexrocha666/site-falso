@@ -11,7 +11,6 @@ body {
   background: #f5f5f5;
 }
 
-/* TOPO */
 header {
   background: #c4170c;
   padding: 20px;
@@ -22,7 +21,6 @@ header img {
   width: 120px;
 }
 
-/* GRID DE NOTÍCIAS */
 .container {
   max-width: 1000px;
   margin: 20px auto;
@@ -31,13 +29,11 @@ header img {
   gap: 20px;
 }
 
-/* CARD */
 .card {
   background: white;
   border-radius: 10px;
   overflow: hidden;
-  text-decoration: none;
-  color: black;
+  cursor: pointer;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -57,25 +53,35 @@ header img {
 <body>
 
 <header>
-  <!-- TROQUE PELO SEU LOGO -->
-  <img src="https://via.placeholder.com/120" alt="Logo">
+  <img src="https://via.placeholder.com/120">
 </header>
 
-<div class="container">
+<div class="container" id="noticias"></div>
 
-  <!-- NOTÍCIA 1 -->
-  <a href="noticia1.html" class="card">
-    <img src="https://via.placeholder.com/400x200">
-    <h3>Homem é flagrado em situação inusitada na cidade</h3>
-  </a>
+<script>
+let noticias = JSON.parse(localStorage.getItem("noticias")) || [];
 
-  <!-- NOTÍCIA 2 -->
-  <a href="noticia2.html" class="card">
-    <img src="https://via.placeholder.com/400x200">
-    <h3>Prefeitura anuncia novidade que surpreende moradores</h3>
-  </a>
+function carregar() {
+  const container = document.getElementById("noticias");
+  container.innerHTML = "";
 
-</div>
+  noticias.slice().reverse().forEach((n, index) => {
+    container.innerHTML += `
+      <div class="card" onclick="abrir(${index})">
+        <img src="${n.imagem}">
+        <h3>${n.titulo}</h3>
+      </div>
+    `;
+  });
+}
+
+function abrir(i) {
+  localStorage.setItem("noticiaSelecionada", i);
+  window.location.href = "noticia.html";
+}
+
+carregar();
+</script>
 
 </body>
 </html>
