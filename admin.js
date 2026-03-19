@@ -1,4 +1,3 @@
-```javascript
 const SENHA = "1234";
 
 function login() {
@@ -17,12 +16,16 @@ function publicar() {
   let conteudo = document.getElementById("conteudo").value;
   let imagem = document.getElementById("imagem").value;
 
+  if (!titulo || !conteudo || !imagem) {
+    alert("Preencha tudo!");
+    return;
+  }
+
   let noticias = JSON.parse(localStorage.getItem("noticias")) || [];
 
   noticias.push({ titulo, conteudo, imagem });
 
   localStorage.setItem("noticias", JSON.stringify(noticias));
 
-  alert("Notícia publicada!");
+  alert("Notícia publicada com sucesso!");
 }
-```
