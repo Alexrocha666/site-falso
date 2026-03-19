@@ -1,92 +1,54 @@
-body{
-font-family: Arial, Helvetica, sans-serif;
-margin:0;
-background:#f4f4f4;
+body {
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
-header{
-background:#c4170c;
-color:white;
+.foto {
+  width: 80px;
+  border-radius: 50%;
 }
 
-.topo{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px;
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
 }
 
-.topo h1{
-margin:0;
+.noticia {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
 }
 
-.redes i{
-margin-left:12px;
-font-size:20px;
-cursor:pointer;
+.noticia img {
+  width: 100%;
+  border-radius: 10px;
 }
 
-nav{
-background:#a5140b;
+.login, .admin {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-nav ul{
-display:flex;
-list-style:none;
-margin:0;
-padding:10px;
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
-nav li{
-margin-right:20px;
-cursor:pointer;
+button {
+  background: green;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
 }
 
-main{
-max-width:1000px;
-margin:auto;
-padding:20px;
-}
-
-.destaque{
-background:white;
-padding:20px;
-border-radius:6px;
-margin-bottom:20px;
-}
-
-.destaque h2{
-color:#c4170c;
-}
-
-.data{
-color:gray;
-font-size:14px;
-}
-
-.aviso{
-background:#ffe8a1;
-padding:8px;
-border-radius:4px;
-font-weight:bold;
-}
-
-.noticias{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-article{
-background:white;
-padding:15px;
-border-radius:6px;
-}
-
-footer{
-background:#222;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:30px;
+.hidden {
+  display: none;
 }
